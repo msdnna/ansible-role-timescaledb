@@ -1,0 +1,10 @@
+[Timescale_TimescaleDB]
+name=timescale_timescaledb
+baseurl={{ timescaledb_url }}/el/{{ ansible_distribution_major_version }}/$basearch
+repo_gpgcheck=1
+gpgcheck=0
+enabled=1
+gpgkey={{ timescaledb_url }}/gpgkey
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+metadata_expire=300

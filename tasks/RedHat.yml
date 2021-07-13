@@ -1,0 +1,13 @@
+---
+# tasks file for RedHat
+
+- name: "Install yum repo file"
+  template:
+    src: timescaledb.repo.j2
+    dest: /etc/yum.repos.d/timescaledb.repo
+
+- name: "Install TimescaleDB package"
+  dnf:
+    name: "timescaledb-postgresql-{{ postgresql_version }}"
+    state: present
+

@@ -1,0 +1,12 @@
+---
+# tasks file for Ubuntu
+
+- name: "Install apt repo file"
+  apt_repository:
+    repo: ppa:timescale/timescaledb-ppa
+
+- name: "Install TimescaleDB package"
+  apt:
+    name: "timescaledb-2-postgresql-{{ postgresql_version }}"
+    state: present
+

@@ -1,0 +1,11 @@
+---
+# tasks file for timescaledb
+
+- include_vars: RedHat.yml
+  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+
+- include_tasks: RedHat.yml
+  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+
+- include_tasks: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
