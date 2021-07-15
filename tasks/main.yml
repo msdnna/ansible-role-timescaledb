@@ -1,11 +1,12 @@
 ---
-# tasks file for timescaledb
 
-- include_vars: RedHat.yml
-  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+- name: Setup RedHat
+  include_tasks: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
 
-- include_tasks: RedHat.yml
-  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+- name: Setup Debian
+  include_tasks: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
 
-- include_tasks: Ubuntu.yml
-  when: ansible_distribution == "Ubuntu"
+- name: Install package
+  include_tasks: install.yml

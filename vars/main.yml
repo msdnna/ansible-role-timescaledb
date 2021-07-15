@@ -1,2 +1,3 @@
 ---
 # vars file for timescaledb
+timescaledb_url: "https://packagecloud.io/timescale/timescaledb"

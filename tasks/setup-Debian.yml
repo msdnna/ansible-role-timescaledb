@@ -1,0 +1,6 @@
+---
+# tasks file for Ubuntu
+
+- name: "Install apt repo file"
+  apt_repository:
+    repo: ppa:timescale/timescaledb-ppa
