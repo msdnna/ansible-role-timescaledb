@@ -10,3 +10,6 @@
 
 - name: Install package
   include_tasks: install.yml
+
+- name: Configure TimeScaleDB
+  include_tasks: configure.yml
