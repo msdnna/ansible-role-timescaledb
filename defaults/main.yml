@@ -5,4 +5,5 @@ postgresql_version: 13
 timescaledb_version: 2
 postgresql_restarted_state: "restarted"
 postgresql_daemon: postgresql
-timescaledb_tune: False
+timescaledb_tune_results: False
+timescaledb_tune_max_conns: 100
