@@ -13,4 +13,3 @@
 
 - name: Configure TimeScaleDB
   include_tasks: configure.yml
-  when: timescaledb_tune == True
