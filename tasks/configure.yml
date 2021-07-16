@@ -4,7 +4,6 @@
   command: /usr/bin/timescaledb-tune -yes
   notify: restart postgresql
   register: results
-  when: timescaledb-tune == True
 
-- name: Results
-  debug: var=results
+#- name: Results
+#  debug: var=results
