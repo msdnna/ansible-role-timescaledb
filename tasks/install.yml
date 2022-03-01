@@ -4,10 +4,16 @@
   package:
     name: "timescaledb-2-postgresql-{{ postgresql_version }}"
     state: present
+  register: result
+  until: result is successful
+  delay: 10
   when: timescaledb_version == 2
 
 - name: Install TimescaleDB package
   package:
     name: "timescaledb-postgresql-{{ postgresql_version }}"
     state: present
+  register: result
+  until: result is successful
+  delay: 10
   when: timescaledb_version == 1
